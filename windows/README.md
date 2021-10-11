@@ -8,15 +8,18 @@ https://docs.microsoft.com/zh-cn/windows/wsl/
 
 在 Windows（10 及以上）的操作系统中安装WSL
 
+推荐使用 Ubuntu 20.04 LTS
+
+
 ### WSL 不继承 Windows 环境变量
 
 避免出现一些不可控情况
 
-编辑文件`/etc/wsl.conf`，加入以下内容
-
 ```bash
-sudo nano /etc/wsl.conf
+sudo nano /etc/wsl.conf #编辑文件`/etc/wsl.conf`
 ```
+
+加入以下内容
 
 ```toml
 [interop]
@@ -28,6 +31,7 @@ appendWindowsPath = false
 ```CMD
 WSL --shutdown
 ```
+
 
 ### WSL 内部 Proxy 环境脚本
 
@@ -58,6 +62,7 @@ source ~/.bashrc
 proxy
 curl https://www.google.com
 ```
+
 
 ## 安装 Golang 语言环境
 
