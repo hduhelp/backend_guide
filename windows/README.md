@@ -1,15 +1,16 @@
 # Windows 环境配置
 
-## WSL 简介 
+## WSL 简介
 
-https://docs.microsoft.com/zh-cn/windows/wsl/
+<https://docs.microsoft.com/zh-cn/windows/wsl/>
 
 ## 安装 WSL
 
-在 Windows（10 及以上）的操作系统中安装WSL
+在 Windows（10 及以上）的操作系统中[安装WSL](https://docs.microsoft.com/zh-cn/windows/wsl/install)（建议使用 [WSL2](https://docs.microsoft.com/zh-cn/windows/wsl/compare-versions#whats-new-in-wsl-2) ，本文档内容也以 WSL2 为基础）
 
-推荐使用 Ubuntu 20.04 LTS
+推荐使用 Ubuntu 20.04 LTS，Microstoft Store [安装链接](https://www.microsoft.com/en-us/p/ubuntu-2004-lts/9n6svws3rx71)
 
+使用WSL后系统环境将变得简单，其他相关的环境配置可以参考本导引[Unix内容](./../unix/)
 
 ### WSL 不继承 Windows 环境变量
 
@@ -31,7 +32,6 @@ appendWindowsPath = false
 ```CMD
 WSL --shutdown
 ```
-
 
 ### WSL 内部 Proxy 环境脚本
 
@@ -63,11 +63,8 @@ proxy
 curl https://www.google.com
 ```
 
+## [安装 Golang 语言环境](./../jetBrains/)
 
-## 安装 Golang 语言环境
+## Visual Studio Code
 
-### JetBrains Toolbox
-
-https://www.jetbrains.com/toolbox-app/
-
-#### 安装 Goland IDE
+<https://code.visualstudio.com>
