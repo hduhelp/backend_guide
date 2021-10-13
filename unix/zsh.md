@@ -2,6 +2,12 @@
 
 ## 安装 ZSH
 
+Ubuntu 20.04 LTS
+
+```bash
+sudo apt install zsh
+```
+
 ## 加载 `.profile`
 
 ```bash

@@ -1,6 +1,6 @@
 # Golang 安装
 
-## 使用`Brew`
+## 使用[`Brew`](./Brew.md)
 
 ```bash
 brew install golang
