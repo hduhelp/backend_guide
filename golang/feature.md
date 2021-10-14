@@ -12,7 +12,7 @@
 ### 关于指针与切片
 以下代码的两个 `change` 函数造成的改动，都能成功生效吗？  
 如果不能，分别是因为什么原因？怎么写才是对的？  
-```
+``` go
 type personInfos struct {
 	Filename string
 	Persons []Person
