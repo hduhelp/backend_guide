@@ -35,16 +35,17 @@ WSL --shutdown
 
 ### WSL 内部 Proxy 环境脚本
 
-将下面函数加入到`~/.bashrc`中，记得编辑端口配置
+将下面函数加入到`~/.profile`中，记得编辑端口
 
 ```bash
-export hostip=$(cat /etc/resolv.conf |grep -oP '(?<=nameserver\ ).*')
+export hostip=$(cat /etc/resolv.conf |grep -oP '(?<=nameserver\ ).*') #获得网关地址
+export proxyPort=7890 #端口
 alias proxy='
-    export https_proxy="http://${hostip}:7890";
-    export http_proxy="http://${hostip}:7890";
-    export all_proxy="http://${hostip}:7890";
-    echo -e "Acquire::http::Proxy \"http://${hostip}:7890\";" | sudo tee -a /etc/apt/apt.conf.d/proxy.conf > /dev/null;
-    echo -e "Acquire::https::Proxy \"http://${hostip}:7890\";" | sudo tee -a /etc/apt/apt.conf.d/proxy.conf > /dev/null;
+    export https_proxy="http://${hostip}:${proxyPort}";
+    export http_proxy="http://${hostip}:${proxyPort}";
+    export all_proxy="http://${hostip}:${proxyPort}";
+    echo -e "Acquire::http::Proxy \"http://${hostip}:${proxyPort}\";" | sudo tee -a /etc/apt/apt.conf.d/proxy.conf > /dev/null;
+    echo -e "Acquire::https::Proxy \"http://${hostip}:${proxyPort}\";" | sudo tee -a /etc/apt/apt.conf.d/proxy.conf > /dev/null;
 '
 alias unproxy='
     unset https_proxy;
@@ -58,9 +59,9 @@ alias unproxy='
 测试可用性
 
 ```bash
-source ~/.bashrc
-proxy
-curl https://www.google.com
+source ~/.profile #加载环境
+proxy #执行函数 代理生效
+curl https://www.google.com #请求Google 网址
 ```
 
 ## [安装 Golang 语言环境](./../jetBrains/)

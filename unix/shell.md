@@ -1,6 +1,10 @@
-# ZSH
+# SHELL 
 
-## 安装 ZSH
+## BASH
+
+
+
+## ZSH & ohmyzsh
 
 Ubuntu 20.04 LTS
 
