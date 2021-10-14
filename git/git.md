@@ -1,5 +1,6 @@
 # Git 教程
 
+<<<<<<< HEAD
 ## 导入
 
 Git 是一个分布式版本控制软件 最初由林纳斯·托瓦兹创作 于2005年以GPL发布 最初目的是为更好地管理Linux内核开发而设计
@@ -125,6 +126,13 @@ https://learngitbranching.js.org/?locale=zh_CN (这是中文版的)
 - branch 更像一个对 commit 的引用操作
 - fork 几乎可以是完全分离 有一些分家的意味 但也可以用来 提 pull Request 为项目提交改变
 
+=======
+## Commit & Branch 等基础使用
+
+https://learngitbranching.js.org/?locale=zh_CN (这是中文版的)
+
+上述教学网站可以提供输入 shell 指令的空间,通过简单的交互和小任务(游戏)的形式使得使用者快速入门 git 命令行操作.
+>>>>>>> 59fb717da0b6b07858aeda02d803c2c2092f0c54
 
 ## 客户端选择
 
