@@ -170,5 +170,27 @@ AngularJS 的 git 规范 是使用较为广泛的规范
 文章: https://docs.google.com/document/d/1QrDFcIiPjSLDn3EL15IJygNPiHORgU1_OOAqWjiDU5Y/edit#heading=h.uyo6cb12dt6w 
 
 
+## git 源代码安全
 
+根据上文，有提及 git 的原理是代码文件的二进制对象存储和压缩。
+
+所以根据这些这些可以完整的恢复出目录的结构与内容 导致整个项目的源代码的泄露
+
+后端要注意在部署环境时需要注意泄露问题 并且将 /.git/ 加入 403 Forbidden 名单
+
+例如：
+> .git/HEAD 当前 git 头指向的一半是下一行的
+> .git/refs/heads/ 分支头 会解释每个分支头的 hash
+> .git/objects/ 存储各种 二进制对象
+
+例如
+
+```
+└─[$] <git:(eson_dev)> cat .git/refs/heads/eson_dev 
+58d6c9ae97405490619d15cdde4fe5d1d97976ed
+└─[$] <git:(eson_dev)> cat .git/objects/58/d6c9ae97405490619d15cdde4fe5d1d97976ed 
+x?? <binary objects>
+```
+
+存储二进制的格式又是公开的标准 所以相关的工具很多。
 
