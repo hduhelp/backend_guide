@@ -25,7 +25,8 @@
 3. type 不方便拓展
 
 <details>
-<summary>点击查看 struct 结构体实现</summary>
+<summary>3.1.1 点击查看 struct 结构体实现</summary>
+
 ```go
 type RMB struct {
 	int
@@ -43,14 +44,14 @@ func Main_3_01_b() {
 	fmt.Printf("The price of Pencil is %v\n", pricePencil)
 	// output: The price of Pencil is ￥2
 }
-
-
 ```
+
 </details>
-#### 3.1.2 
+
 
 <details>
-<summary>点击查看 type 实现</summary>
+<summary>3.1.2 点击查看 type 实现</summary>
+
 ```go
 type RMB int
 
@@ -70,8 +71,8 @@ func Main_3_01() {
 	fmt.Printf("Pencil is %v cheaper than pen\n", pricePen-pricePencil)
 	// output: Pencil is ￥8 cheaper than pen
 }
-
 ```
+
 </details>
 
 ## 四、代码纠错/辩析（做）
@@ -79,8 +80,10 @@ func Main_3_01() {
 ### 4.1 纠错：关于指针与切片
 以下代码的两个 `change` 函数造成的改动，都能成功生效吗？  
 如果不能，分别是因为什么原因？怎么写才是对的？ 
+
 <details>
 <summary>点击查看代码详情</summary>
+
 ``` go
 type personInfos struct {
 	Filename string
@@ -109,7 +112,6 @@ func (p *personInfos)ChangeSomeThingV2() {
 		}
 	}
 }
-
 ```
 
 </details>
@@ -118,6 +120,7 @@ func (p *personInfos)ChangeSomeThingV2() {
 
 <details>
 <summary>点击查看代码</summary>
+
 ```go
 //Address 地址结构体
 type Address struct {
