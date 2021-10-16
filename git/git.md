@@ -113,6 +113,21 @@ git push --force
 git push -h
 ```
 
+### git submodule
+
+这是一个很奇怪的概念。操作是一个子模块 安插在你的项目里，并且起到一定的作用（例如 hugo 的主题模块等）
+
+同时 submodule 本身也是作为一个 git repo 存在的
+
+你可能会说
+> 啊 这都一样啊 为什么不直接使用那个 仓库 的 git 把它直接塞进去呢？
+
+这里有两个问题
+
+1. 你不能在 git 下使用两个 带.git文件夹的资料 submodule 会将子项目（子模块）的.git变更为文件 指向主仓库的模块 并且创建 .gitmodule 用以维护
+2. 子模块可以随时跟着 子模块的仓库的更新进行更新
+
+
 ## Commit & Branch 基础使用的小游戏
 
 https://learngitbranching.js.org/?locale=zh_CN (这是中文版的)
@@ -125,7 +140,6 @@ https://learngitbranching.js.org/?locale=zh_CN (这是中文版的)
 - branch 更像一个对 commit 的引用操作
 - fork 几乎可以是完全分离 有一些分家的意味 但也可以用来 提 pull Request 为项目提交改变
 
-=======
 ## Commit & Branch 等基础使用
 
 https://learngitbranching.js.org/?locale=zh_CN (这是中文版的)
