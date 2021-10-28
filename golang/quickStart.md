@@ -9,7 +9,8 @@
 
 ## 这里插一节简单的网络知识、前后端交互课
 
-## 这里插一份简单的 git 操作文档
+## git 操作文档
+* [git教程](https://www.liaoxuefeng.com/wiki/896043488029600)
 
 ## Gin —— web 框架
 
