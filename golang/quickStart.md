@@ -9,8 +9,12 @@
 
 ## 这里插一节简单的网络知识、前后端交互课
 
+* [backend guide](../common/networkKnowledge.md)
+
 ## git 操作文档
 * [git教程](https://www.liaoxuefeng.com/wiki/896043488029600)
+* [backend guide](../git)
+
 
 ## Gin —— web 框架
 

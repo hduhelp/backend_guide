@@ -1,11 +1,9 @@
-# JetBrains
+# 关于 jetbrains 家相关工具的使用
 
-## 介绍
+### [./](./)
 
-### 安装 Goland IDE
+### [../](../)
 
-下载安装包安装<https://www.jetbrains.com/zh-cn/go/>
+### [IDE 与管理](./commonware.md)
 
-### JetBrains Toolbox 安装
-
-<https://www.jetbrains.com/toolbox-app/>
+### [教育邮箱](./edu.md)
